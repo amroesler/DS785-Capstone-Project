@@ -86,7 +86,6 @@ library(stringr)
 
 # Census and geographic data
 library(tidycensus)
-library(zipcodeR)
 
 # Data import
 library(readxl)
@@ -101,49 +100,56 @@ library(randomForest)
 
 # Model interpretation
 library(SHAPforxgboost)
+library(corrplot)
+library(car)
 
 # Visualization
 library(ggplot2)
-library(GGally)
 library(gridExtra)
 library(patchwork)
 
 # Utilities
 library(DescTools)
+library(psych)
 ```
 
 ### Running the Analysis
 
 The script is organized into sections that should be run sequentially:
 
-1. **Data Reading and Processing** (Lines 1-250)
+1. **Data Reading and Processing** (Lines 1-320)
    - Loads and cleans all datasets
    - Creates city-specific data frames
    - Spatial aggregation to census tracts
+  
+2. **Data Exploration** (Lines 321-406)
+   - View stats on variables
+   - Density and Q-Q plots before and after pre-processing
+   - Multicollinearity check
 
-2. **Train/Test Split Creation** (Lines 251-350)
+3. **Train/Test Split Creation** (Lines 407-488)
    - Creates 80/20 splits for each city and model version
 
-3. **Baseline Linear Regression** (Lines 351-450)
+3. **Baseline Linear Regression** (Lines 489-557)
    - Establishes baseline performance
    - 10-fold repeated cross-validation
 
-4. **Hyperparameter Tuning** (Lines 451-650)
+4. **Hyperparameter Tuning** (Lines 559-744)
    - Initial grid searches for XGBoost and Random Forest
    - Iterative refinement of hyperparameters
    - **Note**: Uncomment final tune grids once parameters are selected
 
-5. **Double Cross-Validation** (Lines 651-850)
+5. **Double Cross-Validation** (Lines 745-936)
    - Nested CV for model selection and assessment
    - Generates final performance metrics
    - **Note**: Update `df_to_use`, random forest tune grid and XGBoost tune grid, and uncomment appropriate RMSE/R², residual, and sq-error lines
 
-6. **Model Assessment** (Lines 851-900)
+6. **Model Assessment** (Lines 937-974)
    - Statistical testing (paired t-tests)
    - Residual diagnostics
    - Visualization of model performance
 
-7. **Final Model Fitting** (Lines 901-950)
+7. **Final Model Fitting** (Lines 975-1070)
    - Refit best models on complete datasets
    - Variable importance analysis
    - SHAP value computation
