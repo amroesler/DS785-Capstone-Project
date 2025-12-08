@@ -715,7 +715,7 @@ rf_tune <- train(
   y = y.Den.Climate,
   method = "rf",
   tuneGrid = expand.grid(mtry = c(15, 16, 17, 18, 19)),
-  trControl = training,
+  trControl = training1,
   ntree = 500,
   importance = TRUE
 )
