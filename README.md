@@ -2,7 +2,7 @@
 
 A machine learning capstone comparing traditional real estate valuation models against models enhanced with climate vulnerability data, across three U.S. cities.
 
-**[📄 Full paper (PDF)](DS785- Final Paper.pdf) • [🎥 Recorded presentation](https://youtu.be/o1IISqVjLfk) • [💻 R code](CapstoneFinalCode.R)**
+**[📄 Full paper (PDF)](DS785_Final_Paper.pdf) • [🎥 Recorded presentation](https://youtu.be/o1IISqVjLfk) • [💻 R code](CapstoneFinalCode.R)**
 
 ## TL;DR
 
@@ -36,7 +36,7 @@ Most existing research on climate and housing looks at a single hazard (usually 
 
 ## Full technical writeup
 
-The complete methodology — including data cleaning decisions, outlier handling, multicollinearity checks, and how to run the code yourself — is documented in [`METHODOLOGY.md`](./METHODOLOGY.md) and in the [full paper](#).
+The complete methodology — including data cleaning decisions, outlier handling, multicollinearity checks, and how to run the code yourself — is documented in [`METHODOLOGY.md`](./METHODOLOGY.md) and in the [full paper](DS785_Final_Paper.pdf).
 
 ---
 *This was my capstone project for the MS in Data Science program at UW–La Crosse.*
