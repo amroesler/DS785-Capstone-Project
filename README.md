@@ -2,7 +2,7 @@
 
 A machine learning capstone comparing traditional real estate valuation models against models enhanced with climate vulnerability data, across three U.S. cities.
 
-**[📄 Full paper (PDF)]() • [🎥 Recorded presentation]() • [💻 R code](./analysis.R)**
+**[📄 Full paper (PDF)]() • [🎥 Recorded presentation](https://youtu.be/o1IISqVjLfk) • [💻 R code](./analysis.R)**
 
 ## TL;DR
 
